@@ -52,5 +52,35 @@ print(cocoraz.name, cocoraz.hp)    # Expected: 100
 
 #this is pisay
 
+---------------------------------------------
+
+class Student:
+    def __init__(self, name:str , age:int, section:str):
+        self.name = name
+        self.age = age
+        self.section = section
+
+class Course:
+    def __init__(self, course_name:str, course_code:str):
+        self.course_name = course_name
+        self.course_code = course_code
+
+    def add_student(self, student: Student):
+        self.students.append(student)
+
+if __name__ == "__main__":
+    student1 = Student("Zaowee", 20, "D12")
+    student2 = Student("Slim Shady", 21, "8MILE")
+
+    course = Course("Math 3", "CS3")
+    course.students = []  # Initialize the students list
+    course.add_student(student1)
+    course.add_student(student2)
+
+    print(f"Course: {course.course_name} ({course.course_code})")
+    print("Enrolled Students:")
+    for student in course.students:
+        print(f"{student.name}, Age: {student.age}, Section: {student.section}")
+
 
 
