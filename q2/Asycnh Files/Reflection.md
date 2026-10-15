@@ -1,2 +1,2 @@
-How does using @property make your code easier to read compared to using traditional get_ and set_ methods?
+ How does using @property make your code easier to read compared to using traditional get_ and set_ methods?
 -Using @property allows you to access and update private attributes as if they were regular public variables (e.g., rect.width = 10 and print(rect.width)), rather than having to call methods with parentheses like rect.set_width(10) and rect.get_width(). This makes the syntax cleaner, more intuitive, and easier to read.
